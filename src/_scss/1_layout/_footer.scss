@@ -1,0 +1,160 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 100;
+
+    &__logo {
+        position: relative;
+        max-width: 165px;
+        width: 100%;
+        height: 53px;
+        margin-right: 53px;
+
+        a::before {
+            content: "";
+            position: absolute;
+            background: url("assets/img/logo.jpg") top right no-repeat;
+            width: 164px;
+            height: 39px;
+
+            @include sp {
+                background: url("assets/img/logoSP.jpg") top right no-repeat;
+                width: 123px;
+                height: 29px;
+            }
+        }
+
+        a {
+            span {
+                position: absolute;
+                font-size: 1.2rem;
+                color: #3c3c3c;
+                top: 33px;
+                left: 49px;
+                letter-spacing: 0;
+
+                @include sp {
+                    position: relative;
+                    padding-left: 25px;
+                    font-weight: 400;
+                    top: 26px;
+                    left: 13px;
+                    font-size: 0.8rem;
+                    letter-spacing: 0;
+                }
+            }
+        }
+
+        a:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+
+    &__recruit {
+        position: relative;
+        max-width: 185px;
+        width: 100%;
+        height: 50px;
+        background-color: #0080cc;
+        border-radius: 9px;
+        padding: 11px 5px 0 27px;
+
+        @include tab {
+            margin-left: auto;
+            max-width: 157px;
+            height: 40px;
+            top: -7px;
+            padding: 8px 10px 11px 39px;
+        }
+        @include sp {
+            display: none;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.8rem;
+            letter-spacing: 0.124em;
+            color: #fff;
+            font-weight: 500;
+
+            @include tab {
+                font-size: 1.6rem;
+            }
+            @include sp {
+                font-size: 1.2rem;
+                letter-spacing: 0.28em;
+            }
+        }
+
+        p::before {
+            content: "";
+            position: absolute;
+            background: url("assets/img/assignment.svg") center no-repeat;
+            width: 20px;
+            height: 20px;
+            left: 35px;
+            top: 15px;
+
+            @include tab {
+                left: 25px;
+                top: 11px;
+            }
+
+            @include sp {
+                left: 15px;
+                top: 9px;
+            }
+        }
+    }
+
+    &__text1 {
+        font-size: 1.4rem;
+        color: #a0a0a0;
+        text-align: right;
+        padding: 9px 61px 15px 0;
+        letter-spacing: 0.01em;
+        @include tab {
+            padding: 9px 20px 11px 0;
+        }
+        @include sp {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            text-align: right;
+            padding: 17px 11px 20px 0;
+            letter-spacing: 0.01em;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 1.4rem;
+        width: 100%;
+        display: inline-block;
+        background: #0080cc;
+        color: #fff;
+        line-height: 2.1;
+        padding: 9px 0;
+        letter-spacing: 0.02em;
+        @include tab {
+            font-size: 1.2rem;
+            padding: 3px 0 0;
+        }
+        @include sp {
+            padding: 5px 0;
+            letter-spacing: 0.02em;
+            font-size: 1rem;
+        }
+    }
+}
